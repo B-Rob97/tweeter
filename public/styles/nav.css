@@ -1,0 +1,42 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  background-color: #4056a1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#logo {
+  /* display: flex; */
+  font-family: 'Bungee', cursive;
+  font-size: 45px;
+  padding-top: 25px;
+}
+
+#new-tweet {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  
+}
+
+#new-tweet-text {
+  margin-bottom: 0.1em;
+};
+
+#new-tweet-icon {
+  display: flex;
+  align-items: center
+  
+};
+
+
