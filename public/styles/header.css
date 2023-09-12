@@ -5,7 +5,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightblue;
+  background-color: #add8e6;
+  background-image: url('/images/background-texture.png');
   flex-direction: column;
 }
 
