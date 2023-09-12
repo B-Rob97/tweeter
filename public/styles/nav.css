@@ -14,14 +14,14 @@ nav {
   right: 0;
 }
 
-#logo {
+#site-logo {
   /* display: flex; */
   font-family: 'Bungee', cursive;
   font-size: 45px;
   padding-top: 25px;
 }
 
-#new-tweet {
+#nav-new-tweet-container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -29,11 +29,11 @@ nav {
   
 }
 
-#new-tweet-text {
+#nav-new-tweet-text {
   margin-bottom: 0.1em;
 };
 
-#new-tweet-icon {
+#nav-new-tweet-icon {
   display: flex;
   align-items: center
   
