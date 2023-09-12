@@ -1,0 +1,81 @@
+/* <article>
+          <header>
+            <main>
+              <div>
+                <h2>Name</h2>
+                <img src="" alt=""ProfilePic>
+              </div>
+              <h2>UserName</h2>
+            </main>
+            <p>
+              Tweet
+            </p>
+          </header>
+          <footer>
+            <time>
+              Days ago Posted
+            </time>
+            <figure>
+              <!-- <img src="" alt="">
+              <img src="" alt="">
+              <img src="" alt=""> -->
+            </figure>
+          </footer>
+        </article> */
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 300px;
+  width: 500px;
+  border: 3px solid black;
+  margin-top: 20px;
+  padding: 0;
+  background-color: #FFFFFF;
+  align-items: center;
+}
+
+article header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 5px solid black;
+  margin: 0;
+  flex-grow: 1.5;
+  width: 95%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+header p {
+  flex-grow: 2;
+}
+
+header main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+main div {
+  display: flex;
+  flex-direction: row;
+}
+
+.display-tweets-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  font-size: small;
+  align-items: flex-start;
+  padding: 10px;
+  width: 475px;
+}
+
+/* .display-tweets-footer time {
+  flex-grow: 1;
+} */
+
+
+
