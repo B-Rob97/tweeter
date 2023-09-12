@@ -53,9 +53,17 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>WOW much tweets</h1>
-      <h2>much hate</h2>
-      <p>Doge</p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method="POST">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
