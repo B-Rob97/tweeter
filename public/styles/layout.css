@@ -35,3 +35,8 @@ body {
   margin-left: 5%;
   margin-right: 5%;
  }
+
+ /* main *:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+ } */
