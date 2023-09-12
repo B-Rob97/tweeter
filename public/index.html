@@ -24,6 +24,10 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="./styles/header.css" type="text/css">
 
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css">
+
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -34,18 +38,18 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span id="logo">Tweeter</span>
-      <div id="new-tweet">
-        <span id="new-tweet-text"><strong>Write</strong>&nbsp;a new tweet</span>
-        <span id="new-tweet-icon"><i class="fa-solid fa-angles-down"></i></span>
+      <span id="site-logo">Tweeter</span>
+      <div id="nav-new-tweet-container">
+        <span id="nav-new-tweet-text"><strong>Write</strong>&nbsp;a new tweet</span>
+        <span id="nav-new-tweet-icon"><i class="fa-solid fa-angles-down"></i></span>
       </div>
     </nav>
     <header>
-      <div id="header-name-picture">
-        <div id="avatar">
+      <div id="user-profile">
+        <div id="user-profile-avatar">
           <img src="/images/profile-hex.png"> 
         </div>
-        <div id="header-name">
+        <div id="user-profile-name">
           <h2>B-Rob97</h2>
         </div>
       </div>
@@ -56,12 +60,12 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
+          <label for="tweet-text">What are you mad about?</label>
           <textarea name="text" id="tweet-text"></textarea>
-          <div>
+          <footer>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
+          </footer>
         </form>
       </section>
     </main>
