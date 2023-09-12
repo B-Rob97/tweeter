@@ -23,3 +23,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.counter {
+  color: #4056a1;
+}
