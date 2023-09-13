@@ -1,6 +1,6 @@
 $(document).ready(function() {
   
-  $('#tweet-text').on('input', function() {
+  $('.tweet-text').on('input', function() {
     const characterCount = (140 - (this.value.length));
 
     const $parentSection = $(this).closest('.new-tweet');
