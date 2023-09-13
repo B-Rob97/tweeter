@@ -1,28 +1,4 @@
-/* <article>
-          <header>
-            <main>
-              <div>
-                <h2>Name</h2>
-                <img src="" alt=""ProfilePic>
-              </div>
-              <h2>UserName</h2>
-            </main>
-            <p>
-              Tweet
-            </p>
-          </header>
-          <footer>
-            <time>
-              Days ago Posted
-            </time>
-            <figure>
-              <!-- <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt=""> -->
-            </figure>
-          </footer>
-        </article> */
-
+/* Reminder: Add classes to display-tweets.js HTML & change here */
 article {
   display: flex;
   flex-direction: column;
@@ -32,8 +8,12 @@ article {
   border: 3px solid black;
   margin-top: 20px;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: #f4f1ec;
   align-items: center;
+}
+
+article:hover {
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 article header {
@@ -55,27 +35,66 @@ header main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 15px;
 }
 
 main div {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  width: 150px;
+  height: 50px;
+  font-size: small;
+}
+
+div img {
+  padding-right: 10px;
+}
+
+main h2 {
+  font-size: medium;
+}
+
+header p {
+  word-wrap: break-word;
 }
 
 .display-tweets-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #FFFFFF;
+  background-color: #f4f1ec;
   font-size: small;
   align-items: flex-start;
-  padding: 10px;
-  width: 475px;
+  padding-top: 5px;
+  width: 450px;
+  height: 50px;
 }
 
-/* .display-tweets-footer time {
-  flex-grow: 1;
-} */
+.display-tweets-footer time {
+  padding-top: 2.5%;
+  flex-grow: 3;
+}
 
+.display-tweets-footer div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
 
+.tweet-icons i {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  gap: 3px;
+}
+
+.tweet-icons i:hover {
+  color: gold;
+}
+
+.tweet-icons i:nth-child(3):hover {
+  color: red;
+}
 
