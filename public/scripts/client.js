@@ -8,10 +8,17 @@ $('document').ready(() => {
 
   const $displayTweetsContainer = $('#new-tweet-container');
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = (tweet) => {
     const { name, avatars, handle } = tweet.user;
     const { text } = tweet.content;
     const date = timeago.format(tweet.created_at);
+
 
     return `
       <article class="display-tweets-container">
@@ -24,7 +31,7 @@ $('document').ready(() => {
             <h2 class="user-handle">${handle}</h2>
           </main>
           <p class="display-tweet-text">
-            ${text}
+            ${escape(text)}
           </p>
         </header>
         <footer class="display-tweets-footer">
@@ -57,6 +64,7 @@ $('document').ready(() => {
       }
     });
   };
+  
 
   loadTweets();
 
