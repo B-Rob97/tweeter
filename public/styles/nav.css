@@ -21,7 +21,7 @@ nav {
   padding-top: 25px;
 }
 
-#nav-new-tweet-container {
+.nav-new-tweet-container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -29,11 +29,11 @@ nav {
   
 }
 
-#nav-new-tweet-text {
+.nav-new-tweet-text {
   margin-bottom: 0.1em;
 };
 
-#nav-new-tweet-icon {
+.nav-new-tweet-icon {
   display: flex;
   align-items: center
   
