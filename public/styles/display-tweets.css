@@ -1,5 +1,5 @@
 /* Reminder: Add classes to display-tweets.js HTML & change here */
-article {
+.display-tweets-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,7 +12,7 @@ article {
   align-items: center;
 }
 
-article:hover {
+.display-tweets-container:hover {
   box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -27,18 +27,18 @@ article header {
   padding-right: 2.5%;
 }
 
-header p {
-  flex-grow: 2;
-}
-
-header main {
+.user-profile-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 15px;
 }
 
-main div {
+.display-tweet-text {
+  flex-grow: 2;
+}
+
+.user-profile-header div {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -47,15 +47,15 @@ main div {
   font-size: small;
 }
 
-div img {
+.user-profile-header div img {
   padding-right: 10px;
 }
 
-main h2 {
-  font-size: medium;
+.user-handle {
+  font-size: x-large;
 }
 
-header p {
+.display-tweet-text {
   word-wrap: break-word;
 }
 
@@ -76,7 +76,7 @@ header p {
   flex-grow: 3;
 }
 
-.display-tweets-footer div {
+.display-tweets-footer .tweet-icons {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

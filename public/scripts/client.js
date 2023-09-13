@@ -69,16 +69,16 @@ const createTweetElement = (tweet) => {
   }
 
   return `
-    <article>
+    <article class="display-tweets-container">
       <header>
-        <main>
+        <main class="user-profile-header">
           <div>
             <img src="${avatars}" alt="ProfilePic">  
             <h2>${name}</h2>
           </div>
-          <h2>${handle}</h2>
+          <h2 class="user-handle">${handle}</h2>
         </main>
-        <p>
+        <p class="display-tweet-text">
           ${text}
         </p>
       </header>
