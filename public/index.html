@@ -38,7 +38,7 @@
 
     <!-- Display Tweets JS -->
     <script type="text/javascript" src="./scripts/display-tweets.js"></script>
-    <script ></script>
+  
 
     <!-- Character Count JS -->
     <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
@@ -55,7 +55,7 @@
         <span id="nav-new-tweet-icon"><i class="fa-solid fa-angles-down"></i></span>
       </div>
     </nav>
-    <header>
+    <header id="main-header">
       <div id="user-profile">
         <div id="user-profile-avatar">
           <img src="/images/profile-hex.png"> 
@@ -71,37 +71,14 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
-          <label for="tweet-text">What are you mad about?</label>
+          <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <footer>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </footer>
         </form>
-        <article>
-          <main>
-            <section>
-              <div>
-                <h2>Name</h2>
-                <img src="" alt=""ProfilePic>
-              </div>
-              <h2>UserName</h2>
-            </section>
-            <p>
-              Tweet
-            </p>
-          </main>
-          <footer>
-            <time>
-              Days ago Posted
-            </time>
-            <figure>
-              <!-- <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt=""> -->
-            </figure>
-          </footer>
-        </article>
+        
       </section>
     </main>
   </body>
