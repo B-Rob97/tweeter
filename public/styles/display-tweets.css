@@ -31,6 +31,7 @@ article header {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 15px;
+  align-items: center;
 }
 
 .display-tweet-text {
@@ -41,7 +42,7 @@ article header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  width: 150px;
+  width: 200px;
   height: 50px;
   font-size: small;
 }
@@ -70,22 +71,29 @@ article header {
   height: 50px;
 }
 
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  height: 45px;
+  width: 120px;
+}
+
 .display-tweets-footer time {
   padding-top: 2.5%;
   flex-grow: 3;
+  font-weight: bold;
 }
 
 .display-tweets-footer .tweet-icons {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-bottom: 15px;
 }
 
 .tweet-icons i {
   display: flex;
   width: 25px;
-  height: 25px;
   gap: 3px;
 }
 
@@ -95,5 +103,12 @@ article header {
 
 .tweet-icons i:nth-child(3):hover {
   color: red;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
 }
 
