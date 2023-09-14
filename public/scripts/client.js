@@ -6,6 +6,16 @@
 
 $('document').ready(() => {
 
+  // Toggle new tweet form
+  $('.nav-new-tweet-container').on('click', () => {
+    const $newTweet = $('.new-tweet');
+    $newTweet.slideToggle(500, function() {
+      if ($newTweet.is(':visible')) {
+        $newTweet.find('textarea[name="text"]').focus();
+      }
+    });
+  });
+  
   const $displayTweetsContainer = $('#new-tweet-container');
 
   const escape = function(str) {
@@ -18,7 +28,6 @@ $('document').ready(() => {
     const { name, avatars, handle } = tweet.user;
     const { text } = tweet.content;
     const date = timeago.format(tweet.created_at);
-
 
     return `
       <article class="display-tweets-container">
@@ -38,11 +47,17 @@ $('document').ready(() => {
           <time>
             ${date}
           </time>
-          <div class="tweet-icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
+          <div class="footer-right">
+            <div class="tweet-icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stats">
+              <p>Likes: <span id="like-count">0</span></p>
+              <p>Retweets: <span id="retweet-count">0</span></p>
+            </div>
+          </div>  
         </footer>
       </article>`;
   };
@@ -65,7 +80,6 @@ $('document').ready(() => {
     });
   };
   
-
   loadTweets();
 
   const $tweetForm = $("#new-tweet-form");
@@ -87,7 +101,6 @@ $('document').ready(() => {
       $('#empty-error').slideUp(200);
     }
     
-
     const tweetData = $tweetForm.serialize();
 
     $.ajax({
@@ -97,6 +110,11 @@ $('document').ready(() => {
       success: () => {
         console.log("Post Success");
         loadTweets();
+        $('textarea[name="text"]').val('');
+        $('.counter').text(140);
+      },
+      error: (error) => {
+        window.alert('Error posting tweet 😓');
       }
     });
   });
