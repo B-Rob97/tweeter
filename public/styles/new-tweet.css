@@ -31,3 +31,29 @@
 .counter {
   color: #4056a1;
 }
+
+#empty-error {
+  background-color: rgb(255, 178, 178);
+  color: red;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  width: 350px;
+  margin-left: 75px;
+  margin-top: 75px;
+  display: none;
+}
+
+#length-error {
+  background-color: rgb(255, 178, 178);
+  color: red;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  width: 350px;
+  margin-left: 75px;
+  margin-top: 75px;
+  display: none;
+}

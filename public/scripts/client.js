@@ -76,14 +76,17 @@ $('document').ready(() => {
     const tweetText = $tweetForm.find('textarea[name="text"]').val();
     
     if (tweetText.length > 140) {
-      window.alert("Tweet is too long!");
-      return;
+      return $('#length-error').slideDown(200).css('display', 'flex');
+    } else {
+      $('#length-error').slideUp(200);
     }
-
+    
     if (!tweetText.trim()) {
-      window.alert("Tweet content is not present!");
-      return;
+      return $('#empty-error').slideDown(200).css('display', 'flex');
+    } else {
+      $('#empty-error').slideUp(200);
     }
+    
 
     const tweetData = $tweetForm.serialize();
 

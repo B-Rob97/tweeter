@@ -67,6 +67,12 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="empty-error">
+          <p>‼️ You tried to submit an empty tweet ‼️</p>
+        </div>
+        <div id="length-error">
+          <p>‼️ Max tweet length is 140 characters ‼️</p>
+        </div>
         <h2>Compose Tweet</h2>
         <form id="new-tweet-form" action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
@@ -76,8 +82,10 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </footer>
         </form>
-        <section id="new-tweet-container"></section>
+
+
       </section>
+        <section id="new-tweet-container"></section>
     </main>
   </body>
 </html>
