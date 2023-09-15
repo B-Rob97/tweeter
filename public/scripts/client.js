@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $('document').ready(() => {
 
   // Toggle new tweet form
@@ -15,9 +9,37 @@ $('document').ready(() => {
       }
     });
   });
+
+  // Scroll-up button
+  $(document).ready(function() {
+    const scrollThreshold = 250;
+    const $scrollUpButton = $(".scroll-up-icon");
+    let isVisible = false;
   
+    $(document).on("scroll", function() {
+      if ($(window).scrollTop() >= scrollThreshold && !isVisible) {
+        $scrollUpButton.slideDown(300).css('display', 'flex');
+        isVisible = true;
+        $('.scroll-up-icon').on('click', function () {
+          window.scrollTo(0,0);
+          const $newTweet = $('.new-tweet');
+          $newTweet.slideDown(500, function() {
+            if ($newTweet.is(':visible')) {
+              $newTweet.find('textarea[name="text"]').focus();
+            }
+          });
+        });
+      } else if ($(window).scrollTop() < scrollThreshold && isVisible) {
+        $scrollUpButton.slideUp(300);
+        isVisible = false;
+      }
+    });
+  });
+
+  // set #new-tweet-container variable global in order to empty before render
   const $displayTweetsContainer = $('#new-tweet-container');
 
+  // Prevent cross-site scripting
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -32,13 +54,13 @@ $('document').ready(() => {
     return `
       <article class="display-tweets-container">
         <header>
-          <main class="user-profile-header">
+          <div class="user-profile-header">
             <div>
               <img src="${avatars}" alt="ProfilePic">  
               <h2>${name}</h2>
             </div>
             <h2 class="user-handle">${handle}</h2>
-          </main>
+          </div>
           <p class="display-tweet-text">
             ${escape(text)}
           </p>
@@ -118,5 +140,4 @@ $('document').ready(() => {
       }
     });
   });
-
 });
