@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -22,16 +24,21 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- Nav CSS -->
-    <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="./styles//Nav/nav.css" type="text/css" />
+    <link rel="stylesheet" href="./styles//Nav/nav-medium.css" type="text/css">
+    <link rel="stylesheet" href="./styles//Nav/nav-small.css" type="text/css">
 
     <!-- Header CSS -->
     <link rel="stylesheet" href="./styles/header.css" type="text/css">
 
     <!-- New Tweet CSS -->
-    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="./styles//NewTweet/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="./styles//NewTweet/new-tweet-small.css" type="text/css">
 
     <!-- Display Tweets CSS -->
-    <link rel="stylesheet" href="./styles/display-tweets.css" type="text/css">
+    <link rel="stylesheet" href="./styles//DisplayTweet/display-tweets.css" type="text/css">
+    <link rel="stylesheet" href="./styles//DisplayTweet/display-tweets-medium.css" type="text/css">
+    <link rel="stylesheet" href="./styles//DisplayTweet/display-tweets-small.css" type="text/css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -42,13 +49,13 @@
     <!-- Character Count JS -->
     <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
 
-
   </head>
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
-      <img id="flying-bird" src="./images/blue-bird-flying-animation-2018.gif" alt="flying-bird">
-      <span id="site-logo">Tweeter</span>
+      <div id="nav-logo-container">
+        <img id="flying-bird" src="./images/blue-bird-flying-animation-2018.gif" alt="flying-bird">
+        <span id="site-logo">Tweeter</span>
+      </div>
       <div class="nav-new-tweet-container">
         <span class="nav-new-tweet-text"><strong>Write</strong>&nbsp;a new tweet</span>
         <span class="nav-new-tweet-icon"><i class="fa-solid fa-angles-down"></i></span>
@@ -64,8 +71,6 @@
         </div>
       </div>
   </header>
-
-    <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <div id="empty-error">
@@ -86,5 +91,6 @@
       </section>
         <section id="new-tweet-container"></section>
     </main>
+    <div class="scroll-up-icon"><i class="fa-solid fa-angles-up"></i></div>
   </body>
 </html>
