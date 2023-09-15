@@ -96,7 +96,6 @@ $('document').ready(() => {
       method: "GET",
       url: "/tweets",
       success: (tweets) => {
-        console.log(tweets);
         renderTweets(tweets);
       }
     });
