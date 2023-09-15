@@ -14,29 +14,7 @@ html {
  * Global layout stuff
  */
 
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: 'Source Sans 3', sans-serif;
-  width: 99vw;
-  display: flex;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
- main.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items:center;
-  background-color: #f4f1ec;
-  margin: 86px auto;
- }
-
- @media (max-width:767px) {
+ @media (min-width:1024px) and (max-width: 3000px) {
   body {
     color: #545149;
     background-color: #f4f1ec;
@@ -44,18 +22,18 @@ body {
     font-family: 'Source Sans 3', sans-serif;
     width: 99vw;
     display: flex;
-    flex-direction: column;
   }
-
-  main.container {
+  
+   main.container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items:center;
     background-color: #f4f1ec;
-    margin: 0px auto;
+    margin: 86px auto;
    }
  }
+
 
  @media (min-width:767px) and (max-width: 1024px) {
   body {
