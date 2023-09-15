@@ -1,0 +1,140 @@
+@media (min-width:767px) and (max-width: 1024px) {
+  
+  .display-tweets-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 300px;
+    width: 95vw;
+    border: 3px solid black;
+    margin: 1em auto;
+    padding: 0;
+    background-color: #f4f1ec;
+    align-items: center;
+  }
+  
+  .display-tweets-container:hover {
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  article header {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid black;
+    margin: 0;
+    flex-grow: 1.5;
+    width: 95%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  
+  .user-profile-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+  }
+  
+  .display-tweet-text {
+    flex-grow: 2;
+  }
+  
+  .user-profile-header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 200px;
+    height: 50px;
+    font-size: small;
+  }
+  
+  .user-profile-header div img {
+    padding-right: 10px;
+  }
+  
+  .user-handle {
+    font-size: x-large;
+  }
+  
+  .display-tweet-text {
+    word-wrap: break-word;
+  }
+  
+  .display-tweets-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f4f1ec;
+    font-size: small;
+    align-items: flex-start;
+    padding-top: 5px;
+    width: 90%;
+    height: 50px;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    height: 45px;
+    width: 120px;
+  }
+  
+  .display-tweets-footer time {
+    padding-top: 3px;
+    flex-grow: 3;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .display-tweets-footer .tweet-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 15px;
+  }
+  
+  .tweet-icons i {
+    display: flex;
+    width: 25px;
+    gap: 3px;
+  }
+  
+  .tweet-icons i:hover {
+    color: gold;
+  }
+  
+  .tweet-icons i:nth-child(3):hover {
+    color: red;
+  }
+  
+  .stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-left: 21px;
+    width: 120px;
+  }
+  
+  .scroll-up-icon {
+    display: none;
+    position: fixed;
+    bottom: 86px;
+    right: 29px;
+    z-index: 1;
+    border: 1px solid black;
+    border-radius: 90px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: #4057a16e;
+  }
+  
+  .fa-solid.fa-angles-up {
+    font-size: 25px;
+    font-weight: bold;
+    color: #4056a1;
+  }
+}

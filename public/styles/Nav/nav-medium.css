@@ -1,0 +1,79 @@
+@media (min-width:767px) and (max-width: 1024px) {
+  
+  nav div img #flying-bird {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background-color: #add8e6;
+    background-image: url('/images/background-texture.png');
+    color: #FFFFFF;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #nav-logo-container {
+    display: flex;
+  
+  }
+  
+  #site-logo {
+    font-family: 'Bungee', cursive;
+    font-size: 2em;
+    padding-top: 42px;
+    margin-left: 8px;
+  }
+  
+  .nav-new-tweet-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 36px;
+    margin-right: -27px;
+    padding-top: 10px;
+    width: 209px;
+    height: 73px;
+
+    /* No credit for this (https://codepen.io/t_afif/pen/rNJegrz) */
+   /* --------------------------------------------------------------- */
+    border: 3px solid;
+    border-image: repeating-linear-gradient(135deg,white 0 10px,white 0 20px,white 0 30px) 8;
+    -webkit-mask: 
+      conic-gradient(from 180deg at top 8px right 8px, #0000 90deg,#000 0)
+      var(--_i,200%) 0  /200% var(--_i,8px) border-box no-repeat,
+      conic-gradient(at bottom 8px left  8px,  #0000 90deg,#000 0)
+      0   var(--_i,200%)/var(--_i,8px) 200% border-box no-repeat,
+      linear-gradient(#000 0 0) padding-box no-repeat;
+    transition: .3s, -webkit-mask-position .3s .3s;
+  }
+  .nav-new-tweet-container:hover {
+    --_i: 100%;
+    color: white;
+    transition: .3s, -webkit-mask-size .3s .3s;
+  }
+/* --------------------------------------------------------------- */
+  
+  .nav-new-tweet-text {
+    margin-bottom: 0;
+    font-size: 18pt
+  };
+  
+  .nav-new-tweet-icon {
+    display: flex;
+    align-items: center;
+  };
+  
+  i.fa-angles-down {
+    font-size: 15pt;
+    margin-bottom: 25px;
+  }
+}
